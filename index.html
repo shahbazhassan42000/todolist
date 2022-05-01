@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>Tic Tac Toe</title>
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="stylesheet" href="css/cssReset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <header>
+        <label for="level">Difficulty</label>
+        <select id="level">
+            <option value="7" selected>Easy</option>
+            <option value="5">Medium</option>
+            <option value="3">Hard</option>
+        </select>
+    </header>
+    <section class="main">
+        <div class="game_box">
+            <div class="game_title">👩🏻‍💻&nbsp;Speed Typer&nbsp;👨🏻‍💻</div>
+            <div class="time&score">
+                <h2>Time left: <span id="time">7</span>s</h2>
+                <h2>Score: <span id="score">0</span></h2>
+            </div>
+            <p>Type the following:</p>
+            <h2 id="word">steer</h2>
+            <input type="text" placeholder="Type the word here..." id="user_input">
+            <p id="game_result">Start typing</p>
+
+        </div>
+    </section>
+</body>
+</html>

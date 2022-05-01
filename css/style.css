@@ -1,0 +1,70 @@
+/************************************** DESKTOP VIEW ****************************************/
+body{
+    color: #FFFFFF;
+    height: 100%;
+    font-family: Verdana;
+}
+header{
+    background: #1F2839;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    gap: 10px;
+}
+#level{
+    background: #A7C0E5;
+    color: #1F2839;
+    padding: 5px;
+    border-radius: 1px;
+    appearance: none;
+}
+.main{
+    background: #2C3A51;
+    display: flex;
+    min-height: calc(100vh - 50px);
+    justify-content: center;
+    align-items: center;
+}
+.game_box{
+    box-shadow: 0 0 18px 8px #212c3e;
+    margin-top: -150px;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #344560;
+    padding: 20px;
+    border-radius: 3px;
+    gap: 10px;
+}
+.game_title{
+    font-size: 1.5rem;
+    background: #243043;
+    font-weight: bold;
+    padding: 7px 100px;
+    border-radius: 2px;
+}
+.time\&score{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+#word{
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+#user_input{
+    font-size: 1.2rem;
+    padding: 6px 12px;
+    border: 2px solid #1F2839;
+    border-radius: 3px;
+}
+
+/************************************** MOBILE VIEW *****************************************/
+@media only screen and (max-width: 600px) {
+    .game_title{
+        padding: 7px 20px;
+    }
+}
