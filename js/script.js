@@ -20,7 +20,11 @@ window.addEventListener("load", function () {
     fetch_tasks();
 
     function search_task(task) {
-        return tasks.hasOwnProperty(task);
+        for (let i in tasks) {
+            if(i===task)
+                return false;
+        }
+        return true;
     }
 
     todo_box.addEventListener("click", function (event) {
