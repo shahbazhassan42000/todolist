@@ -1,70 +1,69 @@
 /************************************** DESKTOP VIEW ****************************************/
 body{
-    color: #FFFFFF;
-    height: 100%;
-    font-family: Verdana;
-}
-header{
-    background: #1F2839;
-    height: 50px;
+    color: #000000;
+    background: #F5F5F5;
+    height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
-    font-size: 1.2rem;
-    gap: 10px;
+    font-family: Verdana, serif;
 }
-#level{
-    background: #A7C0E5;
-    color: #1F2839;
-    padding: 5px;
+#todo_box{
+    box-shadow: 0 0 8px 5px #D5D5D5;
+    max-width: 500px;
+    margin: auto;
+}
+.entry{
+    padding: 10px 20px;
+    font-size: 1.5rem;
     border-radius: 1px;
-    appearance: none;
-}
-.main{
-    background: #2C3A51;
-    display: flex;
-    min-height: calc(100vh - 50px);
-    justify-content: center;
-    align-items: center;
-}
-.game_box{
-    box-shadow: 0 0 18px 8px #212c3e;
-    margin-top: -150px;
-    font-size: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: #344560;
-    padding: 20px;
-    border-radius: 3px;
-    gap: 10px;
-}
-.game_title{
-    font-size: 1.5rem;
-    background: #243043;
-    font-weight: bold;
-    padding: 7px 100px;
-    border-radius: 2px;
-}
-.time\&score{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-#word{
-    font-weight: bold;
-    font-size: 1.5rem;
+    border-bottom: 1px solid #D5D5D5 !important;
 }
 #user_input{
-    font-size: 1.2rem;
-    padding: 6px 12px;
-    border: 2px solid #1F2839;
-    border-radius: 3px;
+    font-size: 2rem;
+    border: none;
+    /*width: -moz-available;*/
+    width: -webkit-fill-available;
+    /*width: fill-available;*/
+}
+#user_input::placeholder{
+    color:#D5D5D5;
+}
+#user_input:focus-visible{
+    outline: none;
+}
+.todo{
+    position: relative;
+    background: #FFFFFF;
+}
+.icon{
+    display: none;
+    position: absolute;
+    right: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 5px 10px;
+    background: #333333;
+    width: 45px;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 3px 3px 0;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.todo:hover .icon{
+    display: inline;
+}
+.icon:active{
+    right: 4px;
+}
+.completed{
+    text-decoration: line-through;
+    color:#D5D5D5;
 }
 
 /************************************** MOBILE VIEW *****************************************/
 @media only screen and (max-width: 600px) {
-    .game_title{
-        padding: 7px 20px;
+    #todo_box{
+        max-width: 95vw;
     }
 }
