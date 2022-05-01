@@ -32,11 +32,11 @@ window.addEventListener("load", function () {
     });
 
     user_input.addEventListener("keypress", function (event) {
-        alert(event.key)
+        alert(event.keyCode)
         if(search_task(user_input.value))
             alert("Task already added");
         else{
-            if ((event.key === "Enter" || event.key === "13") && user_input.value !== "") {
+            if ((event.key === "Enter" || event.keyCode === 13) && user_input.value !== "") {
                 add_task(user_input.value);
                 add_in_db(user_input.value);
                 user_input.value = "";
