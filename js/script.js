@@ -9,9 +9,9 @@ window.addEventListener("load", function () {
     }
 
     function fetch_tasks() {
-        for(let task in tasks){
+        for (let task in tasks) {
             add_task(task);
-            if(tasks[task]){
+            if (tasks[task]) {
                 todo_box.lastElementChild.classList.add("completed");
             }
         }
@@ -32,10 +32,10 @@ window.addEventListener("load", function () {
     });
 
     user_input.addEventListener("keypress", function (event) {
-        alert(event.keyCode)
-        if(search_task(user_input.value))
+        alert("code" + event.keyCode)
+        if (search_task(user_input.value))
             alert("Task already added");
-        else{
+        else {
             if ((event.key === "Enter" || event.keyCode === 13) && user_input.value !== "") {
                 add_task(user_input.value);
                 add_in_db(user_input.value);
@@ -60,7 +60,7 @@ window.addEventListener("load", function () {
     }
 
     function add_in_db(value) {
-        tasks[value]=false;
+        tasks[value] = false;
         localStorage.setItem("todo list", JSON.stringify(tasks));
     }
 
@@ -72,7 +72,7 @@ window.addEventListener("load", function () {
 
     function toggle_task(task) {
         task.classList.toggle("completed");
-        let key=task.innerText;
+        let key = task.innerText;
         tasks[key] = !tasks[key];
         localStorage.setItem("todo list", JSON.stringify(tasks));
     }
