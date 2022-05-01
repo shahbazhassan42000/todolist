@@ -4,7 +4,7 @@ window.addEventListener("load", function () {
     // localStorage.setItem("todo list", "") //clear session storage
     let db = localStorage.getItem("todo list");
     let tasks = {}
-    if (db !== "") {
+    if (db !== null) {
         tasks = JSON.parse(db);
     }
 
