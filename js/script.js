@@ -22,9 +22,9 @@ window.addEventListener("load", function () {
     function search_task(task) {
         for (let i in tasks) {
             if(i===task)
-                return false;
+                return true
         }
-        return true;
+        return false;
     }
 
     todo_box.addEventListener("click", function (event) {
